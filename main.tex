@@ -1,0 +1,48 @@
+%! Author = tobig
+%! Date = 2022-12-22
+
+% Preamble
+\documentclass[11pt]{beamer}
+
+\graphicspath{{./images/}}
+
+% Packages
+\usepackage{booktabs}
+\usepackage{graphicx}
+
+\usetheme{Copenhagen}
+
+%-----------------------------------------------------------
+%   Presentation Information
+%-----------------------------------------------------------
+\title[Tutorium Lineare Algebra]{Tutorium Lineare Algebra}
+\subtitle{Vorlesung Mathematik 1 - Lineare Algebra - WS 2022/23}
+\author{Tobias Goetz}
+\institute{DHBW Ravensburg}
+\logo{\includegraphics[width=1.5cm]{logo}}
+\date{\today}
+%-----------------------------------------------------------
+
+% Document
+\begin{document}
+    %-----------------------------------------------------------
+    %   Title Slide
+    %-----------------------------------------------------------
+    \begin{frame}
+        \titlepage
+    \end{frame}
+
+    %-----------------------------------------------------------
+    %   Table of Contents
+    %-----------------------------------------------------------
+    \begin{frame}
+        \frametitle{Inhalt}
+        \tableofcontents
+    \end{frame}
+
+    %-----------------------------------------------------------
+    %   Sections
+    %-----------------------------------------------------------
+    \include{sections/Introduction}
+
+\end{document}
