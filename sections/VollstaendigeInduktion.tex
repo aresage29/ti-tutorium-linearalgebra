@@ -1,6 +1,23 @@
 \section{Vollständige Induktion}
 \begin{frame}
     \frametitle{Vollständige Induktion}
+    Vollständige Induktion wird verwendet um die Gültigkeit von Aussagen für alle natürlichen Zahlen zu beweisen, die größer oder gleich einem Startwert sind
+    \vfill
+     Vorgehen wie bei Domino:
+        \newline Bedingung zuerst für den ersten "Stein" prüfen und dann für den nächsten, welcher alle anderen umwirft
+    \begin{itemize}
+        
+        \vfill \item Induktionsanfang(IA)($n=1$):
+        \vfill \item Induktionsvoraussetzung(IV):
+                \newline Die Aussage gelte für ein beliebiges aber festes $n \in \mathbb{N}$
+        \vfill \item Induktionsschritt(IS)($n \Rightarrow n+1$):
+        \newline Die Aussage gilt für "immer das nächste n"
+
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Vollständige Induktion}
     Zu beweisende Aussage: $\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$
     \vfill
     \begin{itemize}
@@ -12,4 +29,44 @@
                 \newline $\sum_{i=1}^{n+1} i = \sum_{i=1}^{n} i + (n+1) \stackrel{IV}{=} \frac{n(n+1)}{2} + (n+1) = \frac{n(n+1)}{2} + \frac{2n+2}{2} = \frac{n(n+1)+2n+2}{2} = \frac{(n+1)(n+2)}{2} \blacksquare$
 
     \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Vollständige Induktion}
+    Übungsaufgabe:
+        \begin{itemize}
+
+    \vfill \item Summe über Quadratzahlen: Zeige, dass für alle natürlichen Zahlen gilt:
+    \newline $\sum_{i=1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}$
+     \vfill \item Summe über ungerade Zahlen: Zeige, dass für alle natürlichen Zahlen gilt:
+    \newline $\sum_{i=1}^{n} (2i-1) = n^2$
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Vollständige Induktion}
+    Lösungen zu 1:
+        \begin{itemize}
+
+    \vfill \item Induktionsanfang
+    \newline $\sum_{i=1}^{1} 1^2 = \frac{1(1+1)(2*1+1)}{6}=1$
+        \vfill \item Aus Induktionsanfang folgt Induktionsvorraussetzung
+        \vfill \item Induktionsschritt ($n \Rightarrow n+1$):
+    \newline $\sum_{i=1}^{n+1} i^2 = \frac{(n+1)(n+2)(2n+3)}{6}$
+            \vfill \item $\sum_{i=1}^{n} i^2 + (n+1)^2 = \frac{(n+1)(n+2)(2n+3)}{6}$
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Vollständige Induktion}
+    Lösungen zu 1:
+        \begin{itemize}
+            \vfill \item $\sum_{i=1}^{n} i^2 + (n+1)^2 = \frac{(n+1)(n+2)(2n+3)}{6}$
+            \vfill \item $\frac{n(n+1)(2n+1)}{6} + (n+1)^2 = \frac{n(n+1)(2n+1)}{6} +n^2 +1$
+            \vfill \item $\frac{n(n+1)(2n+1)}{6} + (n+1)^2 = \frac{2n^3 +3n^2 +n}{6} + \frac{6n^2 +12n+6}{6}$
+    \end{itemize}
+    \vfill $\frac{n(n+1)(2n+1)}{6} + \frac{((n+1)^2)6}{6} = \frac{(n+1) + (n+2)(2*(n+1)+1)}{6}$
+
 \end{frame}
