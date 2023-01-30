@@ -6,7 +6,7 @@ Modul: Mathematik I (T3INF1001)
 Dozent: Christoph Spandl  
 Semester: 2023 Q1
 
-## Dozenten
+## Tutoren
 - [Tobias Goetz](https://github.com/TobiasGoetz)
 - Mario Schwartz
 - Felix Schladt
