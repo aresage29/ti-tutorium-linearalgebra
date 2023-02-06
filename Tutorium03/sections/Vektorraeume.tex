@@ -54,3 +54,80 @@
         \item $v \cdot w = (-2 \cdot 4) + (3 \cdot 5) + (-6 \cdot 6) = -8 + 15 + -36 = -43$.
     \end{enumerate}
 \end{frame}
+
+\begin{frame}
+    \frametitle{Besondere Vektoren}
+    \begin{itemize}
+        \item Nullvektor: $v = (0, 0, \dots, 0)$
+        \item Einheitsvektor: $|v| = 1$
+        \item Vektor der Standardbasis: $e_i = (0, 0, \dots, 1, \dots, 0)$
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Allgemeine Rechenregeln}
+    Vektoraddition
+    \begin{itemize}
+        \item Kommutativgesetz: $v + w = w + v$
+        \item Assoziativgesetz: $(v + w) + u = v + (w + u)$
+        \item Existenz des neutrales Elements: $v + 0 = v$
+        \item Existenz des inversen Elements: $v + (-v) = 0$
+    \end{itemize}
+
+    Skalarmultiplikation
+    \begin{itemize}
+        \item Distributivgesetz 1: $c \cdot (v + w) = c \cdot v + c \cdot w$
+        \item Distributivgesetz 2: $(c + d) \cdot v = c \cdot v + d \cdot v$
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Exkurs: Ursprung der Vektorraumaxiome}
+    \begin{itemize}
+        \item Gruppe
+        \begin{itemize}
+            \item $(G,*)$, Menge $G$, Verknüpfung $*$
+            \item Assozsiativität
+            \item Existenz eines neutrales Elements
+            \item Existenz eines inversen Elements
+        \end{itemize}
+        \item Ring
+        \begin{itemize}
+            \item $(R,+,*)$ mit $R$ Menge, $+$ Verknüpfung, $*$ Verknüpfung
+            \item $(R,+)$ ist abelsche Gruppe(Gruppe mit Kommutativgesetz)
+            \item $(R,*)$ ist Halbgruppe(nur Assoziativität)
+            \item Distributiv 1: $a * (b + c) = a * b + a * c$
+            \item Distributiv 2: $(a + b) * c = a * c + b * c$
+        \end{itemize}
+        \item Körper
+        \begin{itemize}
+            \item $(K,+,*)$ mit $K$ Menge, $+$ Verknüpfung, $*$ Verknüpfung
+            \begin{itemize}
+                \item $(K,+)$ ist abelsche Gruppe
+                \item $(K\setminus\{0\},*)$ ist abelsche Gruppe
+                \item Distributiv 1: $a * (b + c) = a * b + a * c$
+                \item Distributiv 2: $(a + b) * c = a * c + b * c$
+            \end{itemize}
+            \item alternativ: kommutativer unitärer Ring, der nicht Nullring ist
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Exkurs: Ursprung der Vektorraumaxiome}
+    \begin{itemize}
+        \item K-Vektorraum
+        \begin{itemize}
+            \item $(V,+,*)$
+            \item $(V,+)$ ist abelsche Gruppe
+            \item $\cdot: K \times V \rightarrow V ((\lambda, v) \mapsto \lambda \cdot v)$
+            \begin{itemize}
+                \item $\forall v,w \in V$ und $\forall \lambda, \mu \in K$ gilt:
+                \item $(\lambda + \mu) \cdot v = \lambda \cdot v + \mu \cdot v$
+                \item $\lambda \cdot (v + w) = \lambda \cdot v + \lambda \cdot w$
+                \item $(\lambda \cdot \mu) \cdot v = \lambda \cdot (\mu \cdot v)$
+                \item $\lambda \cdot 1 = \lambda$
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+\end{frame}
