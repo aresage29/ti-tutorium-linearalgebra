@@ -9,7 +9,7 @@ jobs:
       - name: Install TeXlive
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          packages: latexmk texlive texlive-science
+          packages: latexmk texlive texlive-publishers texlive-science cm-super
           version: 1.0
       - name: LaTeX compile
         run: latexmk
