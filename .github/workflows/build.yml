@@ -7,10 +7,7 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v3
       - name: Install TeXlive
-        uses: awalsh128/cache-apt-pkgs-action@latest
-        with:
-          packages: texlive texlive-publishers texlive-science latexmk cm-super
-          version: 1.0
+        run: sudo apt-get update && sudo apt-get install texlive texlive-publishers texlive-science latexmk cm-super
       - name: LaTeX compile
         run: latexmk
       - name: Upload PDF file
