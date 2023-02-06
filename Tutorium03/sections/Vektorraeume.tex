@@ -1,0 +1,56 @@
+\section{Vektorraeume}
+
+\subsection{Vektoren}
+\begin{frame}
+    \frametitle{Vektoren Grundlagen}
+    Ein Vektor ist ein Tupel aus $n$ reellen Zahlen, also ein $n$-dimensionaler Vektor.
+    \begin{itemize}
+        \item $n$-dimensionaler Vektor: $v = (v_1, v_2, \dots, v_n)$
+        \item $n$-dimensionaler Vektor: $v = \begin{pmatrix}
+                                                 v_1 \\ v_2 \\ \vdots \\ v_n
+        \end{pmatrix}$
+        \item $n$-dimensionaler Vektor: $v = \begin{pmatrix}
+                                                 v_1 & v_2 & \dots & v_n
+        \end{pmatrix}$
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Mit Vektoren rechnen}
+    Seien v= $(v_1, v_2, \dots, v_n)$ und w= $(w_1, w_2, \dots, w_n)$ zwei $n$-dimensionale Vektoren.
+    \begin{itemize}
+        \item Addition: $v + w = (v_1 + w_1, v_2 + w_2, \dots, v_n + w_n)$
+        \item Subtraktion: $v - w = (v_1 - w_1, v_2 - w_2, \dots, v_n - w_n)$
+        \item Skalarmultiplikation: $c \cdot v = (c \cdot v_1, c \cdot v_2, \dots, c \cdot v_n)$
+        \item Länge: $|v| = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2}$
+        \item Normalisierung: $\hat{v} = \frac{v}{|v|}$
+        \item Skalarprodukt: $v \cdot w = v_1 \cdot w_1 + v_2 \cdot w_2 + \dots + v_n \cdot w_n$
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Vektoren Uebung}
+    Seien $v = (-2, 3, -6)$ und $w = (4, 5, 6)$ zwei $n$-dimensionale Vektoren.
+    Berechnen Sie:
+    \begin{enumerate}
+        \item $v + w$.
+        \item $v - w$.
+        \item $2 \cdot v$.
+        \item $|v|$.
+        \item $\hat{v}$.
+        \item $v \cdot w$.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Vektoren Uebung Loesung}
+    Seien $v = (-2, 3, -6)$ und $w = (4, 5, 6)$ zwei $n$-dimensionale Vektoren.
+    \begin{enumerate}
+        \item $v + w = (-2 + 4, 3 + 5, -6 + 6) = (2, 8, 0)$.
+        \item $v - w = (-2 - 4, 3 - 5, -6 - 6) = (-6, -2, -12)$.
+        \item $2 \cdot v = (2 \cdot -2, 2 \cdot 3, 2 \cdot -6) = (-4, 6, -12)$.
+        \item $|v| = \sqrt{(-2)^2 + 3^2 + (-6)^2} = \sqrt{4 + 9 + 36} = \sqrt{49} = 7$.
+        \item $\hat{v} = \frac{v}{|v|} = \frac{(-2, 3, -6)}{7} = \frac{(-2, 3, -6)}{7} = (-\frac{2}{7}, \frac{3}{7}, -\frac{6}{7})$.
+        \item $v \cdot w = (-2 \cdot 4) + (3 \cdot 5) + (-6 \cdot 6) = -8 + 15 + -36 = -43$.
+    \end{enumerate}
+\end{frame}
