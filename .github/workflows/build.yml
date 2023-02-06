@@ -9,8 +9,9 @@ jobs:
       - name: Install TeXlive
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          packages: latexmk texlive texlive-publishers texlive-science cm-super
+          packages: latexmk texlive-full texlive-publishers texlive-science cm-super
           version: 1.0
+          execute_install_scripts: true
       - name: LaTeX compile
         run: latexmk
       - name: Upload PDF file
