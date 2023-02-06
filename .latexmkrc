@@ -4,4 +4,5 @@ $pdf_previewer = "open";
 $interaction = 'nonstopmode';
 
 @default_files = ('./Tutorium*/Tutorium*.tex');
+$aux_dir = "auxil/";
 $out_dir = "out/";
