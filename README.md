@@ -28,4 +28,6 @@ Stelle sicher, dass [latexmk](https://mg.readthedocs.io/latexmk.html) installier
 - Falls noch nicht installiert, öffne den  MikTeX Paket Manager und installiere das latexmk Paket.
 
 ### Latexmk ausführen
-`latexmk`
+```sh
+latexmk
+```
