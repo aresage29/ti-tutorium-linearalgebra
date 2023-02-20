@@ -1,0 +1,168 @@
+\section{Matrix Muliplikation}
+\subsection{Grundlagen}
+\begin{frame}
+\frametitle{Matrix Multiplikation}
+Wenn die \textbf{Anzahl der Spalten} der ersten Matrix \textbf{gleich} der \textbf{Anzahl der Zeilen} der zweiten Matrix, können diese Multipliziert werden.
+
+$c_{ij} = \sum_{k=1}^n a_{ik}b_{kj}= a_{i1}b_{1j} + a_{i2}b_{2j} + \dots + a_{in}b_{nj}$
+
+$ A = \begin{pmatrix} 2 & 1 & 0 \\ -1 & -5 & 4 \end{pmatrix} $,
+$ B = \begin{pmatrix} 3 & 5 \\ -2 & 1 \\ 0 & 7 \end{pmatrix} $
+$
+\begin{array}{c c c|c c}
+& & & 3 & 5\\
+& & & -2 & 1\\
+& & & 0 & 7\\
+\hline
+2 & 1 & 0 & 4 & 11\\
+-1 & -5 & 4 & 7 & 18\\
+\end{array}
+$
+$ A \cdot B = \begin{pmatrix} 4 & 11 \\ 7 & 18 \end{pmatrix} $
+\end{frame}
+
+\subsection{Rechenregeln}
+\begin{frame}
+\frametitle{Matrix Multiplikation - Rechenregeln}
+\textbf{Wichtig: Kommutativgesetz gilt nicht!}\\
+Rechenregeln:
+\begin{itemize}
+\item $(kA)B = k(AB) = A(kB)$
+\item $A(BC) = (AB)C$ (Assoziativgesetz)
+\item $(A+B)C = AC + BC$ (Distributivgesetz 1)
+\item $A(B+C) = AB + AC$ (Distributivgesetz 2)
+\item $(AB)^T = B^T \cdot A^T$
+\item $\mathbb{I}_n\cdot A = A\cdot \mathbb{I}_n = A$
+\end{itemize}
+\end{frame}
+
+\subsubsection{Übungen}
+\begin{frame}
+\frametitle{Matrix Multiplikation - Übungen}
+\begin{enumerate}
+\item $ \begin{pmatrix} 
+1 & 4 & 0 & 1\\ 
+0 & 2 & 1 & 3 
+\end{pmatrix} 
+\cdot 
+\begin{pmatrix} 
+1 & 0 & 3 \\ 
+0 & 1 & 1\\
+3 & 4 & 1\\
+2 & 0 & 1
+\end{pmatrix} $
+\item 
+$\begin{pmatrix} 
+1 & 0 & 3 \\ 
+0 & 1 & 1\\
+3 & 4 & 1\\
+2 & 0 & 1
+\end{pmatrix} 
+\cdot 
+\begin{pmatrix} 
+1 & 4 & 0 & 1\\ 
+0 & 2 & 1 & 3 
+\end{pmatrix} $
+\item
+$\begin{pmatrix}
+2 & -3.1 \\
+2 & 1.6 \\
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+-0.7 \\
+-4.5 
+\end{pmatrix}$
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Matrix Multiplikation - Übungen Lösung}
+\begin{enumerate}
+\item $ \begin{pmatrix} 
+1 & 4 & 0 & 1\\ 
+0 & 2 & 1 & 3 
+\end{pmatrix} 
+\cdot 
+\begin{pmatrix} 
+1 & 0 & 3 \\ 
+0 & 1 & 1\\
+3 & 4 & 1\\
+2 & 0 & 1
+\end{pmatrix} 
+= 
+\begin{pmatrix} 
+3 & 4 & 8 \\ 
+9 & 6 & 6
+\end{pmatrix} $
+\item 
+$\begin{pmatrix} 
+1 & 0 & 3 \\ 
+0 & 1 & 1\\
+3 & 4 & 1\\
+2 & 0 & 1
+\end{pmatrix} 
+\cdot 
+\begin{pmatrix} 
+1 & 4 & 0 & 1\\ 
+0 & 2 & 1 & 3 
+\end{pmatrix} 
+=> $Geht nicht.
+\item
+$\begin{pmatrix}
+2 & -3.1 \\
+2 & 1.6 \\
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+-0.7 \\
+-4.5 
+\end{pmatrix}
+=
+\begin{pmatrix}
+12.55 \\
+-8.6
+\end{pmatrix}$
+\end{enumerate}
+\end{frame}
+
+\subsection{Inverse}
+\begin{frame}
+\frametitle{Matrix Multiplikation - Inverse}
+Nicht jede Matrix besitzt eine Inverse. Es muss auf jeden Fall eine quadratische Matrix vorliegen.\\
+Nicht jede quadratische Matrix ist invertierbar.\\
+$A\cdot A^{-1} = A^{-1}\cdot A = \mathbb{I}$
+
+Wenn eine Matrix Invertierbar ist, nennt man dies \textit{invertierbar} oder \textbf{regulär}.
+
+Regeln:
+\begin{itemize}
+\item $(AB)^{-1} = A^{-1}B^{-1}$
+\item $(kA)^{-1} = k^{-1}A^{-1}$ k Skalar mit $k\neq0$
+\item $(A^T)^{-1} = (A^{-1})^T$
+\item $A^{-1} = (A^{-1})^{-1}$
+\end{itemize}
+\end{frame}
+
+\subsubsection{Übungen}
+\begin{frame}
+\frametitle{Matrix Multiplikation - Inverse - Übungen}
+\begin{enumerate}
+\item Ist Matrix $A = \begin{pmatrix} 2 & 4 \\ 4 & 2 \end{pmatrix}$ regulär? Wenn ja dann gebe die Inverse an.
+\item Ist Matrix $B = \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{pmatrix}$ regulär? Wenn ja dann gebe die Inverse an.
+\item Ist Matrix $C = \begin{pmatrix} 12 & 4 \\ 0 & 0  \end{pmatrix}$ regulär? Wenn ja dann gebe die Inverse an.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Matrix Multiplikation - Inverse - Übungen Lösung}
+\begin{enumerate}
+\item Ist Matrix $A = \begin{pmatrix} 2 & 4 \\ 4 & 2 \end{pmatrix}$ regulär? Wenn ja dann gebe die Inverse an. \\
+Lösung: Ja; Gesucht Matrix $B = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$
+$B = \frac{1}{6}\begin{pmatrix} -1 & 2 \\ 2 & -1 \end{pmatrix}$
+\item Ist Matrix $B = \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{pmatrix}$ regulär? Nein
+\item  Ist Matrix $C = \begin{pmatrix} 12 & 4 \\ 0 & 0  \end{pmatrix}$ regulär?
+Lösung: Nein denn Determinante $\neq 0$.
+\end{enumerate}
+\end{frame}
+

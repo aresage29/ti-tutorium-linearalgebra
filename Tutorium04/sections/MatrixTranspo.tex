@@ -1,0 +1,133 @@
+\section{Matrix Transponieren}
+\begin{frame}
+\frametitle{Transponieren von Matrizen}
+Man vertauscht die Zeilen und Spalten einer Matrix. Die Transponierte einer Matrix A ist die Matrix A\textsuperscript{T}.
+Eine (m,n)-Matrix A hat die Transponierte A\textsuperscript{T} die Dimension (n,m). Die Transponierte einer Transponierten ist die Matrix selbst.
+\newline
+
+Beispiel:\\
+$\begin{pmatrix}
+1 & 2 & 3\\
+4 & 5 & 6
+\end{pmatrix}\textsuperscript{T} = \begin{pmatrix}
+1 & 4\\
+2 & 5\\
+3 & 6
+\end{pmatrix}$
+
+\end{frame}
+
+\subsection{Rechenregeln}
+\begin{frame}
+\frametitle{Transponierte von Matrizen - Rechenregeln}
+Für das Transponieren gelten folgende Rechenregeln:
+\begin{itemize}
+\item $A\textsuperscript{T}\textsuperscript{T} = A$
+\item $(A+B)\textsuperscript{T} = A\textsuperscript{T} + B\textsuperscript{T}$
+\item $(AB)\textsuperscript{T} = B\textsuperscript{T}A\textsuperscript{T}$
+\end{itemize}
+
+Quadratische Matrix wo $A = A\textsuperscript{T}$ ist, nennt man \textbf{symmetrisch}.\\
+Eine Matrix wo $A = -A\textsuperscript{T}$ ist, nennt man \textbf{antisymmetrisch} oder \textbf{schiefsymmetrisch}.
+\end{frame}
+
+\subsubsection{Übungen}
+\begin{frame}
+\frametitle{Transponieren von Matrizen - Übungen}
+\begin{enumerate}
+\item $A = \begin{pmatrix}
+1 & 0 & 3\\
+2 & -1 & -2\\
+-3 & 0 & 4
+\end{pmatrix}$
+\item A\textsuperscript{T}+B\textsuperscript{T}
+$A = \begin{pmatrix}
+1 & 4 \\
+5 & 6
+\end{pmatrix}
+B = \begin{pmatrix}
+2 & 0\\
+-2 & -3
+\end{pmatrix}$
+\end{enumerate}
+\end{frame}
+
+
+\subsubsection{Lösungen}
+\begin{frame}
+\begin{enumerate}
+\item $A\textsuperscript{T} = \begin{pmatrix}
+1 & 2 & -3\\
+0 & -1 & 0\\
+-3 & 0 & 4
+\end{pmatrix}$
+\item $A + B = \begin{pmatrix}
+1 & 4\\
+5 & 6
+\end{pmatrix} + \begin{pmatrix}
+2 & 0\\
+-2 & -3
+\end{pmatrix} = \begin{pmatrix}
+3 & 4\\
+3 & 3
+\end{pmatrix} 
+\newline
+=> (A+B)\textsuperscript{T} = \begin{pmatrix}
+3 & 3\\
+4 & 3
+\end{pmatrix}$
+\end{enumerate}
+\end{frame}
+
+\subsection{Dreiecksmatrizen}
+\begin{frame}
+\frametitle{Obere - Dreiecksmatrix}
+Eine Matrix A ist \textbf{obere Dreiecksmatrix} wenn alle Elemente unterhalb der Hauptdiagonale 0 sind.\\
+$A = \begin{pmatrix}
+a_{11} & a_{12} & a_{13} & \dots & a_{1n}\\
+0 & a_{22} & a_{23} & \dots & a_{2n}\\
+0 & 0 & a_{33} & \dots & a_{3n}\\
+\vdots & \vdots & \vdots & \ddots & \vdots\\
+0 & 0 & 0 & \dots & a_{nn}
+\end{pmatrix}$
+\end{frame}
+
+\begin{frame}
+\frametitle{Untere - Dreiecksmatrix}
+Eine Matrix A ist \textbf{untere Dreiecksmatrix} wenn alle Elemente oberhalb der Hauptdiagonale 0 sind.\\
+$A = \begin{pmatrix}
+a_{11} & 0 & 0 & \dots & 0\\
+a_{21} & a_{22} & 0 & \dots & 0\\
+a_{31} & a_{32} & a_{33} & \dots & 0\\
+\vdots & \vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & a_{n3} & \dots & a_{nn}
+\end{pmatrix}$
+\end{frame}
+
+\subsection{Diagonalmatrix}
+\begin{frame}
+\frametitle{Diagonalmatrix}
+Eine Matrix A ist \textbf{Diagonalmatrix} wenn alle Elemente außerhalb der Hauptdiagonale 0 sind.\\
+$A = \begin{pmatrix}
+a_{11} & 0 & 0 & \dots & 0\\
+0 & a_{22} & 0 & \dots & 0\\
+0 & 0 & a_{33} & \dots & 0\\
+\vdots & \vdots & \vdots & \ddots & \vdots\\
+0 & 0 & 0 & \dots & a_{nn}
+\end{pmatrix}$
+\end{frame}
+
+
+\subsection{Einheitsmatrix}
+\begin{frame}
+\frametitle{Einheitsmatrix}
+Eine Matrix A ist \textbf{Einheitsmatrix} wenn alle Elemente außerhalb der Hauptdiagonale 0 sind und die Elemente auf der Hauptdiagonale 1 sind.\\
+$A = \begin{pmatrix}
+1 & 0 & 0 & \dots & 0\\
+0 & 1 & 0 & \dots & 0\\
+0 & 0 & 1 & \dots & 0\\
+\vdots & \vdots & \vdots & \ddots & \vdots\\
+0 & 0 & 0 & \dots & 1
+\end{pmatrix}$
+Diese wird auch mit $\mathbb{I}$ bezeichnet.
+\end{frame}

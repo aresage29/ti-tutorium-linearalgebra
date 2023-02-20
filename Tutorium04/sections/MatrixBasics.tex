@@ -1,0 +1,99 @@
+\section{Reelle Matrizen}
+
+\subsection{Basics}
+\begin{frame}
+    \frametitle{Was ist das?}
+    \begin{itemize}
+        \item Eine Matrix ist eine Anordnung von Zahlen in Zeilen und Spalten.
+        \item Die Zahlen in einer Matrix werden als Elemente oder Koeffizienten bezeichnet.
+        \item Eine $m \times n$ Matrix hat $m$ Zeilen und $n$ Spalten.
+        \item Die Elemente einer Matrix werden mit $a_{ij}$ bezeichnet.
+        \item Beispiel: $A = \begin{pmatrix}
+                                 1 & 2 & 3 \\
+                                 4 & 5 & 6 \\
+                                 7 & 8 & 9
+        \end{pmatrix}$
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Was ist das?}
+    \begin{itemize}
+        \item Zeilen einer Matrix werden auch als Zeilenvektoren bezeichnet.
+        \item Spalten einer Matrix werden auch als Spaltenvektoren bezeichnet.
+        \item Gilt $Anzahl Zeilen = Anzahl Spalten$ dann ist die Matrix quadratisch.
+    \end{itemize}
+\end{frame}
+
+\subsection{Einfache Rechenoperationen}
+\begin{frame}
+    \frametitle{Einfache Rechenoperationen}
+    $A + B =
+    \begin{pmatrix}
+        a_{11} & a_{12} & \dots  & a_{1n} \\
+        a_{21} & a_{22} & \dots  & a_{2n} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        a_{m1} & a_{m2} & \dots  & a_{mn}
+    \end{pmatrix}
+    +
+    \begin{pmatrix}
+        b_{11} & b_{12} & \dots  & b_{1n} \\
+        b_{21} & b_{22} & \dots  & b_{2n} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        b_{m1} & b_{m2} & \dots  & b_{mn}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        a_{11} + b_{11} & a_{12} + b_{12} & \dots  & a_{1n} + b_{1n} \\
+        a_{21} + b_{21} & a_{22} + b_{22} & \dots  & a_{2n} + b_{2n} \\
+        \vdots          & \vdots          & \ddots & \vdots          \\
+        a_{m1} + b_{m1} & a_{m2} + b_{m2} & \dots  & a_{mn} + b_{mn}
+    \end{pmatrix}$
+\end{frame}
+
+\begin{frame}
+    \frametitle{Einfache Rechenoperationen}
+    $k \cdot A =
+    k \cdot
+    \begin{pmatrix}
+        a_{11} & a_{12} & \dots  & a_{1n} \\
+        a_{21} & a_{22} & \dots  & a_{2n} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        a_{m1} & a_{m2} & \dots  & a_{mn}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        k \cdot a_{11} & k \cdot a_{12} & \dots  & k \cdot a_{1n} \\
+        k \cdot a_{21} & k \cdot a_{22} & \dots  & k \cdot a_{2n} \\
+        \vdots         & \vdots         & \ddots & \vdots         \\
+        k \cdot a_{m1} & k \cdot a_{m2} & \dots  & k \cdot a_{mn}
+    \end{pmatrix}$
+\end{frame}
+
+\begin{frame}
+    \frametitle{Rechenregeln}
+    Es sei $A, B, C \in \mathbb{R}^{m \times n}$ und $k, h \in \mathbb{R}$.
+    \begin{itemize}
+        \item $A + B = B + A$ (Kommutativgesetz)
+        \item $A + (B + C) = (A + B) + C$ (Assoziativgesetz)
+        \item $A + 0 = A$ (Existenz des neutralen Elements)
+        \item $A + (-A) = 0$ (Existenz des inversen Elements)
+        \item $k(hA) = (kh)A$
+        \item $1A = A$
+        \item $k(A + B) = kA + kB$ (Distributivgesetz 1)
+        \item $(k + h)A = kA + hA$ (Distributivgesetz 2)
+    \end{itemize}
+\end{frame}
+
+\subsection{Besondere Matrizen}
+\begin{frame}
+    \frametitle{Besondere Matrizen}
+    \begin{itemize}
+        \item Nullmatrix $A = 0 = \begin{pmatrix}
+                                    0 & 0 & \dots  & 0 \\
+                                    0 & 0 & \dots  & 0 \\
+                                    \vdots & \vdots & \ddots & \vdots \\
+                                    0 & 0 & \dots  & 0
+        \end{pmatrix}$
+    \end{itemize}
+\end{frame}
