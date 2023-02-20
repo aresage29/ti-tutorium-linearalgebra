@@ -1,0 +1,56 @@
+\section{Vektorräume}
+\subsection{Lineare Abhängigkeit}
+\begin{frame}
+    \frametitle{Lineare Abhängigkeit - Allgemein}
+    Vorraussetzung: Vektrorräume aus Kapitel 3
+    \begin{itemize}
+        \item In einem Vektorraum sind alle Vektoren über die Basisvekoren konstruierbar
+        \item $\sum\nolimits_{n=0}^N ki * ai$ 
+        \item wenn ein Vektor ai über eine Kombination der anderen erzeugbar ist, dann sind die Vektoren linear abhängig
+        
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Lineare Abhängigkeit - Überprüfung}
+    \begin{itemize}
+        \item Überprüfbar ist dies durch Lösung des Gleichungssystems aller Vektoren multipliziert mit den Skalaren k
+        \item $k1 * (ax1, ay1) + k2* (ax2, ay2) = 0$ 
+        \item $k1 * ax1 + k2* ax2 = 0$
+        \item $k1 * ay1 + k2* ay2 = 0$
+        \item Sind alle k ungleich 0, dann sind die Vektoren linear unabhängig
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Lineare Abhängigkeit - Übung}
+    Aufgabe: Überprüfen Sie, ob die Vektoren $\vec{a}$, $\vec{b}$ und $\vec{c}$ linear abhängig sind
+    \begin{itemize}
+        \item $\vec{a} = (1, 2)$ $\vec{b} = (2, 4)$ $\vec{c} = (3, 6)$
+        
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Lineare Abhängigkeit - Übung}
+    Lösung
+    \begin{itemize}
+        \item $\vec{a} = k1 * (1, 2) + k2 * (2, 4) + k3 * (3, 6)$
+        \item $k1 * 1 + k2 * 2 + k3 * 3 = 0$
+        \item $k1 * 2 + k2 * 4 + k3 * 6 = 0$
+        \item $k1 = -k2 = -k3$
+        \item $\vec{a} = -k1 * (1, 2) = -k1 * \vec{b} = -k1 * \vec{c}$
+        \item $\vec{a}$ ist linear abhängig von $\vec{b}$ und $\vec{c}$
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Lineare Abhängigkeit - Basis}
+    Die Basis ist die Menge aller Linear Unabhängigen Vektoren eines Vektorraumes
+    \begin{itemize}
+        \item Mit den Basisvektoren lässt sich jeder Punkt im Verktorraum erreichen
+        \item Anzahl der Basisvektoren = Dimension des Vektorraumes
+        \item Beispiel 2D: $\vec{a} = (1, 0)$ $\vec{b} = (0, 1)$
+        
+    \end{itemize}
+\end{frame}
