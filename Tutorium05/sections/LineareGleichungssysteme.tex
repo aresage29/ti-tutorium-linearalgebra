@@ -1,4 +1,5 @@
 \section{Lineare Gleichungssysteme}
+
 \subsection{Allgemein}
 \begin{frame}
     \frametitle{Allgemein}
@@ -158,9 +159,9 @@
     Loesen Sie das folgende Gleichungssystem mit dem Gauss-Jordan-Verfahren
     \begin{align*}
         &\begin{cases}
-            x_1 + 2x_2 + 3x_3 = 1 \\
-            2x_1 + 3x_2 + 4x_3 = 2 \\
-            3x_1 + 4x_2 + 5x_3 = 3
+             x_1 + 2x_2 + 3x_3 = 1 \\
+             2x_1 + 3x_2 + 4x_3 = 2 \\
+             3x_1 + 4x_2 + 5x_3 = 3
         \end{cases} \\
         &\implies
         \begin{pmatrix}
@@ -187,4 +188,46 @@
             0 & 0 & 0 & \bigm| & 0
         \end{pmatrix}
     \end{align*}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Inverse einer Matrix mit Gauss-Jordan}
+    \begin{itemize}
+        \item Inverse einer Matrix $A$ ist eine Matrix $A^{-1}$, sodass $A^{-1}A = I$
+        \item $A^{-1}$ kann mit dem Gauss-Jordan-Verfahren berechnet werden
+        \item $A^{-1}$ ist dann die rechte Spalte der erweiterten Koeffizientenmatrix
+        \item
+        \begin{equation*}
+            \begin{pmatrix}
+                A & \bigm| & I
+            \end{pmatrix}
+            \implies
+            \begin{pmatrix}
+                I & \bigm| & A^{-1}
+            \end{pmatrix}
+        \end{equation*}
+    \end{itemize}
+\end{frame}
+
+\subsection{Rang}
+\begin{frame}
+    \frametitle{Rang}
+    Moeglichkeiten den Rang einer Matrix zu berechnen:
+    \begin{itemize}
+        \item In reduzierter Zeilenstufenform.
+        Anzahl der nicht-null Zeilen ist Rang
+        \item Spaltenrang (Anzahl linear unabhängiger Spaltenvektoren)
+        \item Zeilenrang (Anzahl linear unabhängiger Zeilenvektoren)
+        \item Quadratische Matrix hat vollen Rang, wenn sie invertierbar ist (d.h. Determinante ungleich 0)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Loesbarkeit eines LGS}
+    \begin{itemize}
+        \item unl\"osbar, wenn Rang der Koeffizientenmatrix kleiner als Rang der erweiterten Koeffizientenmatrix.
+        sprich: Nullreihe mit nicht-null Elementen ganz rechts
+        \item genau eine Loesung, wenn Rang der Koeffizientenmatrix gleich Rang der erweiterten Koeffizientenmatrix.
+        \item unendlich viele Loesungen, wenn Rang der Koeffizientenmatrix groesser als Rang der erweiterten Koeffizientenmatrix.
+    \end{itemize}
 \end{frame}
