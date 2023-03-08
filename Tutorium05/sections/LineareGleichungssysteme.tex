@@ -1,0 +1,233 @@
+\section{Lineare Gleichungssysteme}
+
+\subsection{Allgemein}
+\begin{frame}
+    \frametitle{Allgemein}
+    Ein lineares Gleichungssystem mit $n$ Unbekannten und $m$ Gleichungen ist gegeben durch
+    \begin{equation*}
+        \begin{cases}
+            a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n = b_1 \\
+            a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n = b_2 \\
+            \vdots \\
+            a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n = b_m
+        \end{cases}
+    \end{equation*}
+    \begin{itemize}
+        \item $a_{ij}$ sind die Koeffizienten der Gleichung
+        \item $a_{ij},  b_i \in \mathbb{R}$
+        \item Gilt $b_i = 0$ für alle $i$, so heißt das Gleichungssystem homogen
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Übung}
+    Welches Gleichungssystem ist linear?
+    Falls ja, ist es auch homogen?
+    \begin{enumerate}
+        \item
+        \begin{equation*}
+            \begin{cases}
+                x_1 + x_2 = 0 \\
+                x_1 - x_2 = 0
+            \end{cases}
+        \end{equation*}
+        \item
+        \begin{equation*}
+            \begin{cases}
+                x_1 + x_2 = 0 \\
+                x_1^2 + x_2^2 = 1
+            \end{cases}
+        \end{equation*}
+        \item
+        \begin{equation*}
+            \begin{cases}
+                x_1 + x_2 = 1 \\
+                x_1 - x_2 = 1
+            \end{cases}
+        \end{equation*}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Übung - Lösung}
+    Welches Gleichungssystem ist linear?
+    Falls ja, ist es auch homogen?
+    \begin{enumerate}
+        \item linear, homogen
+        \begin{equation*}
+            \begin{cases}
+                x_1 + x_2 = 0 \\
+                x_1 - x_2 = 0
+            \end{cases}
+        \end{equation*}
+        \item nicht linear
+        \begin{equation*}
+            \begin{cases}
+                x_1 + x_2 = 0 \\
+                x_1^2 + x_2^2 = 1
+            \end{cases}
+        \end{equation*}
+        \item linear, nicht homogen
+        \begin{equation*}
+            \begin{cases}
+                x_1 + x_2 = 1 \\
+                x_1 - x_2 = 1
+            \end{cases}
+        \end{equation*}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Zusammenhang LGS und Matrix}
+    \begin{multline}
+        \begin{cases}
+            a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n = b_1 \\
+            a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n = b_2 \\
+            \vdots \\
+            a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n = b_m
+        \end{cases}
+        \\ \equiv
+        \begin{pmatrix}
+            a_{11} & a_{12} & \dots  & a_{1n} \\
+            a_{21} & a_{22} & \dots  & a_{2n} \\
+            \vdots & \vdots & \ddots & \vdots \\
+            a_{m1} & a_{m2} & \dots  & a_{mn}
+        \end{pmatrix}
+        \begin{pmatrix}
+            x_1    \\
+            x_2    \\
+            \vdots \\
+            x_n
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            b_1    \\
+            b_2    \\
+            \vdots \\
+            b_m
+        \end{pmatrix}
+    \end{multline}
+    Die entstandene Matrix nennt man Koeffizientenmatrix
+\end{frame}
+
+\begin{frame}
+    \frametitle{Lösung eines LGS}
+    \begin{itemize}
+        \item homogenes LGS hat genau eine(Nullvektor) oder unendlich viele Lösungen
+        \item inhomogenes LGS kann keine, genau eine oder unendlich viele Lösungen haben
+    \end{itemize}
+\end{frame}
+
+\subsection{Gauss-Jordan-Verfahren}
+\begin{frame}
+    \frametitle{Gauss-Jordan-Verfahren}
+    \begin{itemize}
+        \item Standardverfahren zur Loesung von LGS
+        \item Erlaubte Operationen:
+        \begin{enumerate}
+            \item Vertauschen zweier Gleichungen
+            \item Multiplikation einer Gleichung mit einer beliebigen nicht verschwindenden Zahl
+            \item Addition einer Gleichung mit einer beliebigen Vielfachen einer anderen Gleichung
+        \end{enumerate}
+        \item Vorraussetzung: erweiterte Koeffizientenmatrix
+        \item Ziel: Matrix in Zeilenstufenform bringen
+        \begin{equation*}
+            \begin{pmatrix}
+                1      & a_{12} & \dots  & a_{1n} & b_1    \\
+                0      & 1      & \dots  & b_{2n} & b_2    \\
+                \vdots & \ddots & \vdots & \vdots & \vdots \\
+                0      & \dots  & 0      & 1      & b_m
+            \end{pmatrix}
+        \end{equation*}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Übung}
+    Loesen Sie das folgende Gleichungssystem mit dem Gauss-Jordan-Verfahren
+    \begin{equation*}
+        \begin{cases}
+            x_1 + 2x_2 + 3x_3 = 1 \\
+            2x_1 + 3x_2 + 4x_3 = 2 \\
+            3x_1 + 4x_2 + 5x_3 = 3
+        \end{cases}
+    \end{equation*}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Übung - Lösung}
+    Loesen Sie das folgende Gleichungssystem mit dem Gauss-Jordan-Verfahren
+    \begin{align*}
+        &\begin{cases}
+             x_1 + 2x_2 + 3x_3 = 1 \\
+             2x_1 + 3x_2 + 4x_3 = 2 \\
+             3x_1 + 4x_2 + 5x_3 = 3
+        \end{cases} \\
+        &\implies
+        \begin{pmatrix}
+            1 & 2 & 3 & \bigm| & 1 \\
+            2 & 3 & 4 & \bigm| & 2 \\
+            3 & 4 & 5 & \bigm| & 3
+        \end{pmatrix}
+        \implies
+        \begin{pmatrix}
+            1 & 2  & 3  & \bigm| & 1 \\
+            0 & -1 & -2 & \bigm| & 0 \\
+            0 & -2 & -3 & \bigm| & 0
+        \end{pmatrix} \\
+        &\implies
+        \begin{pmatrix}
+            1 & 2 & 3 & \bigm| & 1 \\
+            0 & 1 & 2 & \bigm| & 0 \\
+            0 & 2 & 3 & \bigm| & 0
+        \end{pmatrix}
+        \implies
+        \begin{pmatrix}
+            1 & 2 & 3 & \bigm| & 1 \\
+            0 & 1 & 2 & \bigm| & 0 \\
+            0 & 0 & 0 & \bigm| & 0
+        \end{pmatrix}
+    \end{align*}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Inverse einer Matrix mit Gauss-Jordan}
+    \begin{itemize}
+        \item Inverse einer Matrix $A$ ist eine Matrix $A^{-1}$, sodass $A^{-1}A = I$
+        \item $A^{-1}$ kann mit dem Gauss-Jordan-Verfahren berechnet werden
+        \item $A^{-1}$ ist dann die rechte Spalte der erweiterten Koeffizientenmatrix
+        \item
+        \begin{equation*}
+            \begin{pmatrix}
+                A & \bigm| & I
+            \end{pmatrix}
+            \implies
+            \begin{pmatrix}
+                I & \bigm| & A^{-1}
+            \end{pmatrix}
+        \end{equation*}
+    \end{itemize}
+\end{frame}
+
+\subsection{Rang}
+\begin{frame}
+    \frametitle{Rang}
+    Möglichkeiten den Rang einer Matrix zu berechnen:
+    \begin{itemize}
+        \item In reduzierter Zeilenstufenform.
+        Anzahl der nicht-null Zeilen ist Rang
+        \item Spaltenrang (Anzahl linear unabhängiger Spaltenvektoren)
+        \item Zeilenrang (Anzahl linear unabhängiger Zeilenvektoren)
+        \item Quadratische Matrix hat vollen Rang, wenn sie invertierbar ist (d.h. Determinante ungleich 0)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Lösbarkeit eines LGS}
+    \begin{itemize}
+        \item unlösbar, wenn Rang der Koeffizientenmatrix kleiner als Rang der erweiterten Koeffizientenmatrix.
+        sprich: Nullreihe mit nicht-null Elementen ganz rechts
+        \item genau eine Loesung, wenn Rang der Koeffizientenmatrix gleich Rang der erweiterten Koeffizientenmatrix.
+        \item unendlich viele Lösungen, wenn Rang der Koeffizientenmatrix größer als Rang der erweiterten Koeffizientenmatrix.
+    \end{itemize}
+\end{frame}
