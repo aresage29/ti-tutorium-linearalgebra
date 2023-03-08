@@ -1,0 +1,252 @@
+\section{Lineare Abbildungen}
+\begin{frame}
+    \frametitle{Zweck}
+    Lineare Abbildungen können als Transformationen von Vektoren verstanden werden. \\
+    z.B. Drehung, Verschiebung, Spiegelung, Stauchung, Streckung, ...
+\end{frame}
+
+\subsection{Definition}
+
+\begin{frame}
+	\frametitle{Haupteigenschaft der linearen Abbildungen}
+	Bei linearen Abbildungen wird immer eine Abbildungsmatrix F mit der Ausgangsmatrix A (oder Ausgangsvektor) multipliziert. $F(A)=F*A$
+	\newline
+	Dafür muss gelten:
+	\begin{itemize}
+		\item $F(A+B)= F*A+F*B = F(A)+F(B)$
+		\item $F(k*A)= k*F*A = k*F(A)$
+	\end{itemize}
+\end{frame}
+
+\subsection{Vorgehensweise}
+
+\begin{frame}
+	\frametitle{Grundverständnis}
+	Abbildung durch Multiplikation einer Matrix mit Ausgangsvektor \\
+	Hier im zweidimensionalen Raum eine Spiegelung an der x-Achse:
+	\begin{itemize}
+		\item x-Koordinate bleibt unverändert, y-Koordinate wird negiert
+	  \end{itemize}
+	  \begin{gather*}
+		F = \begin{pmatrix}
+			1 & 0 \\
+			0 & -1
+			\end{pmatrix} \\ \end{gather*}
+
+		Zeilen der Matrix entsprechen den Bildern der Einheitsvektoren
+		\begin{gather*} in X-Richtung:  \begin{pmatrix}
+			1 \\
+			0
+			\end{pmatrix} \\
+		in Y-Richtung: \begin{pmatrix}
+			0 \\
+			-1
+			\end{pmatrix} \\ \end{gather*}
+\end{frame}
+
+\subsection{Transformationen}
+
+\begin{frame}
+	\frametitle{Spiegelungen}
+	Spiegelungen im zweidimensionalen Raum:
+	\begin{itemize}
+		\item an x-Achse: \begin{gather*} \begin{pmatrix}
+			1 & 0 \\
+			0 & -1
+			\end{pmatrix} \\ \end{gather*}
+		\item an y-Achse:  \begin{gather*} \begin{pmatrix}
+			-1 & 0 \\
+			0 & 1
+		\end{pmatrix} \\ \end{gather*}
+		\item an der Diagonalen: \begin{gather*} \begin{pmatrix}
+			0 & 1 \\
+			1 & 0
+			\end{pmatrix} \\ \end{gather*}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Spiegelungen}
+	Spiegelungen im dreidimensionalen Raum:
+		\begin{gather*} x_{1}x_{2}-Ebene: \begin{pmatrix}
+			1 & 0 & 0\\
+			0 & 1 & 0\\
+			0 & 0 & -1
+			\end{pmatrix} \\
+		x_{2}x_{3}-Ebene: \begin{pmatrix}
+			-1 & 0 & 0\\
+			0 & 1 & 0\\
+			0 & 0 & 1
+		\end{pmatrix} \\
+		x_{1}x_{3}-Ebene: \begin{pmatrix}
+			1 & 0 & 0\\
+			0 & -1 & 0\\
+			0 & 0 & 1
+		\end{pmatrix} \\ \end{gather*}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Streckung / Stauchung}
+	Prinzip für alle Räume identisch:
+	\begin{itemize}
+		\item in Richtung der x-Achse um Faktor s: \begin{gather*} \begin{pmatrix}
+			s & 0 \\
+			0 & 1
+			\end{pmatrix} \\ \end{gather*}
+		\item in Richtung der y-Achse um Faktor s: \begin{gather*} \begin{pmatrix}
+			1 & 0 \\
+			0 & s
+		\end{pmatrix} \\ \end{gather*}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Drehung}
+	Drehung gegen den Uhrzeigersinn um Winkel $\alpha$:
+	\begin{itemize}
+		\item im zweidimensionalen: \begin{gather*} \begin{pmatrix}
+			cos{\alpha} & -sin{\alpha} \\
+			sin{\alpha} & cos{\alpha}
+			\end{pmatrix} \end{gather*} \\
+		\item im dreidimensionalen Raum wird immer um eine Achse gedreht:
+	\end{itemize}
+		\begin{gather*} um X_{1}-Achse \begin{pmatrix}
+			1 & 0 & 0 \\
+			0 & cos{\alpha} & -sin{\alpha} \\
+			0 & sin{\alpha} & cos{\alpha}
+		\end{pmatrix} \end{gather*} \\
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Kombination von Transformationen}
+	Es können auch mehrere Transformationen hintereinander ausgeführt werden:
+	\begin{itemize}
+		\item Es wird von rechts nach links gelesen
+	\end{itemize}
+	Beispiel:
+	Erst Streckung der x-Achse, dann Spiegeln an Y-Achse:
+	\begin{gather*}
+	\begin{pmatrix}
+		-1 & 0 \\
+		0 & 1
+	\end{pmatrix} \cdot
+	\begin{pmatrix}
+		2 & 0 \\
+		0 & 1
+	\end{pmatrix} \end{gather*}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Umkehrabbildung}
+	Ist eine lineare Abbildung F umkehrbar (Streckung mit 2, zu Stauchung um $\frac{1}{2}$), dann gilt:
+	\begin{itemize}
+		\item Die Umkehrabbildung ist auch eine lineare Abbildung
+		\item Die Umkehrungabbildung wird mit $F^{-1}$ bezeichnet
+		\item Das Produkt von F und $F^{-1}$ die Einheitsmatrix
+		\item Abbildungen bei denen sich die Dimension ändert sind nicht umkehrbar
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Affine Abbildungen}
+	Eine Abbildung heißt affine Abbildung, wenn sie eine lineare Abbildung ist, und zusätzlich um einen Vektor verschoben wird.
+	\begin{itemize}
+		\item $F(A) = k*A + v$
+		\item Dies ist keine lineare Abbildung
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Übungen}
+	\begin{gather*}
+	vec{a} = \begin{pmatrix}
+	    3 \\
+	    1 \\
+	    2
+	\end{pmatrix}
+	\end{gather*}
+	\begin{itemize}
+		\item a Spiegeln an der $x_{1}x_{2}$-Ebene
+		\item a Strecken um den Faktor 5 in Richtung der $x_{2}$-Achse
+		\item a drehen um 90° gegen den Uhrzeigersinn um die $x_{1}$-Achse
+		\item a erst Strecken um den Faktor 5 in Richtung der $x_{3}$-Achse, dann Spiegeln an der $x_{2}x_{3}$-Ebene
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Lösungen}
+	\begin{itemize}
+		\item Spiegeln
+		\begin{gather*}
+		\begin{pmatrix}
+			1 & 0 & 0 \\
+			0 & 1 & 0 \\
+			0 & 0 & $-1$
+			\end{pmatrix} \cdot
+			\begin{pmatrix}
+				3 \\
+				1 \\
+				2
+			\end{pmatrix} = \begin{pmatrix}
+				3 \\
+				1 \\
+				-2
+			\end{pmatrix} \end{gather*}
+		\item Strecken
+		\begin{gather*} \begin{pmatrix}
+			1 & 0 & 0 \\
+			0 & 5 & 0 \\
+			0 & 0 & 1
+			\end{pmatrix} \cdot
+			\begin{pmatrix}
+				3 \\
+				1 \\
+				2
+			\end{pmatrix} = \begin{pmatrix}
+				3 \\
+				5 \\
+				2
+			\end{pmatrix} \end{gather*}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Lösungen}
+	\begin{itemize}
+		\item Drehen
+		\begin{gather*} \begin{pmatrix}
+			1 & 0 & 0 \\
+			0 & cos{90} & -sin{90} \\
+			0 & sin{90} & cos{90}
+			\end{pmatrix} \cdot
+			\begin{pmatrix}
+				3 \\
+				1 \\
+				2
+				\end{pmatrix} = \begin{pmatrix}
+					3 \\
+					-2 \\
+					1
+				\end{pmatrix} \end{gather*}
+		\item Strecken und Drehen
+		\begin{gather*} \begin{pmatrix}
+				-1 & 0 & 0 \\
+				0 & 1 & 0 \\
+				0 & 0 & 1
+				\end{pmatrix} \cdot
+				\begin{pmatrix}
+					1 & 0 & 0 \\
+					0 & 1 & 0 \\
+					0 & 0 & 5
+				\end{pmatrix} \cdot \begin{pmatrix}
+					3 \\
+					1 \\
+					2
+				\end{pmatrix} = \begin{pmatrix}
+					-3 \\
+					1 \\
+					10
+				\end{pmatrix} \end{gather*}
+	\end{itemize}
+\end{frame}
