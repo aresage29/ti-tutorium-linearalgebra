@@ -1,4 +1,5 @@
 \section{Rang Kern Bild}
+\subsection{Rang}
 \begin{frame}
     \frametitle{Rang}
     \begin{itemize}
@@ -10,6 +11,57 @@
 \end{frame}
 
 \begin{frame}
+	\frametitle{Beispiel}
+	\begin{align*}
+		A = \begin{pmatrix}
+			2 & 4 & 0 \\
+			0 & 0 & 1 \\
+			0 & 0 & 0
+		\end{pmatrix}
+	\end{align*}
+	\begin{itemize}
+		\item $rang(A) = 2$
+		\item $A$ ist schon fast in Zeilenstufenform und somit kann der Rang leicht abgelesen werden
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Übung I}
+	Bestimme den Rang der Matrix
+	\begin{align*}
+		\begin{pmatrix}
+			1 & -2 & 1 \\
+			3 & -2 & -4 \\
+			2 & 6 & -4 \\
+			1 & 3 & -2 
+		\end{pmatrix}
+	\end{align*}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Übung I - Lösung}
+	Bestimme den Rang der Matrix
+	\begin{align*}
+		\begin{pmatrix}
+			1 & -2 & 1 \\
+			3 & -2 & -4 \\
+			2 & 6 & -4 \\
+			1 & 3 & -2 
+		\end{pmatrix} \\
+		\leftrightarrow
+		\begin{pmatrix}
+			1 & -2 & 1 \\
+			0 & 4 & -7 \\
+			0 & 0 & \frac{23}{2} \\
+			0 & 0 & 0
+		\end{pmatrix} 
+	\end{align*}
+	$\rightarrow$ der Rang von $A$ ist somit $3$.
+\end{frame}
+
+
+\subsection{Bild}
+\begin{frame}
     \frametitle{Bild}
     \begin{itemize}
         \item $Bild(A)={Ax | x\in \mathbb{R}^n}$
@@ -17,6 +69,7 @@
     \end{itemize}
 \end{frame}
 
+\subsection{Kern}
 \begin{frame}
     \frametitle{Kern}
     \begin{itemize}
@@ -24,4 +77,65 @@
         \item Menge aller Elemente, die auf 0 abgebildet werden
         \item $Ker(A)$ ist Lösungsmenge des zu A gehörenden homogenen LGS
     \end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Beispiel I}
+	\begin{align*}
+		A = \begin{pmatrix}
+			1 & 1 & 2 \\
+			0 & 1 & 1 \\
+			1 & 0 & 1 
+		\end{pmatrix}
+	\end{align*}
+	Um den Kern zu bestimmen muss das homogene LGS Ax = 0 gelöst werden.
+	\begin{align*}
+		\begin{pmatrix}
+			1 & 1 & 2 \\
+			0 & 1 & 1 \\
+			1 & 0 & 1 
+		\end{pmatrix} \rightarrow
+		\begin{pmatrix}
+			1 & 1 & 2 \\
+			0 & 1 & 1 \\
+			0 & -1 & -1 
+		\end{pmatrix} \rightarrow
+		\begin{pmatrix}
+			1 & 0 & 1 \\
+			0 & 1 & 1 \\
+			0 & 0 & 0 
+		\end{pmatrix} 
+	\end{align*}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Beispiel II}
+	\begin{align*}
+		a + c = 0 \\
+		b + c = 0 \\
+	\end{align*}
+	Wir definieren dann zum Beispiel $c = t$ und erhalten
+	\begin{align*}
+		a = -t \\
+		b = -t 
+	\end{align*}
+	Somit kommen wir dann auf Ker(A) = 
+	$\{t \cdot (-1, -1, 1) | t \in \mathbb{R}\}$
+\end{frame}
+
+\begin{frame}
+	\frametitle{Beispiel III}
+	Da wir die Matrix A den Rang 2 hat haben wir 2 unabhängige Spaltenvektoren.
+	Daraus folgt das Bild:
+	\begin{align*}
+		Bild(A) = \{k_1 \cdot \begin{pmatrix}
+			1 \\
+			0 \\
+			1 
+		\end{pmatrix} + k_2 \cdot \begin{pmatrix}
+			1 \\
+			1 \\
+			0 
+		\end{pmatrix} | k_1, k_2 \in \mathbb{R}\}
+	\end{align*}
 \end{frame}
