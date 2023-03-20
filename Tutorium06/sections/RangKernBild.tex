@@ -69,6 +69,95 @@
     \end{itemize}
 \end{frame}
 
+\begin{frame}
+    \frametitle{Bild Berechnung Verfahren 1}
+    \begin{enumerate}
+        \item Matrix transponieren
+		\item Matrix in Zeilenstufenform umwandeln
+		\item Matrix zurück transponieren
+		\item Lösung aufschreiben
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Bild Berechnung Verfahren 2}
+    \begin{itemize}
+        \item Doppeltes Transponieren vermeiden
+		\item Matrix in untere Dreiecksmatrix umwandeln (Achtung: Statt Zeilenumformungen Spaltenumformungen verwenden)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Übung}
+	Es sei
+    $A =
+    \begin{pmatrix}
+        1 & 3 & 2 \\
+        2 & 4 & 4 \\
+        3 & 5 & 6
+    \end{pmatrix}$
+    \begin{enumerate}
+        \item Geben Sie das Bild von $A$ an.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Übung - Lösung}
+	Es sei
+    $A =
+    \begin{pmatrix}
+        1 & 3 & 2 \\
+        2 & 4 & 4 \\
+        3 & 5 & 6
+    \end{pmatrix}$
+    \begin{enumerate}
+		\item Matrix transponieren $\Rightarrow
+		\begin{pmatrix}
+			1 & 2 & 3 \\
+			3 & 4 & 5 \\
+			2 & 4 & 6
+		\end{pmatrix}$
+		\item Matrix in Zeilenstufenform bringen $\Rightarrow
+		\begin{pmatrix}
+			1 & 2 & 3 \\
+			0 & -2 & -4 \\
+			0 & 0 & 1
+		\end{pmatrix}$
+		\item Matrix zurück transponieren $\Rightarrow
+		\begin{pmatrix}
+			1 & 0 & 0 \\
+			2 & -2 & 0 \\
+			3 & -4 & 0
+		\end{pmatrix}$
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Übung - Lösung}
+    \begin{enumerate}
+		\setcounter{enumi}{4}
+        \item
+		$Bild(A) = {
+		\lambda_1 \cdot
+		\begin{pmatrix}
+			1 \\
+			2 \\
+			3
+		\end{pmatrix}
+		+
+		\lambda_2 \cdot
+		\begin{pmatrix}
+			0 \\
+			-2 \\
+			-4
+		\end{pmatrix}
+		| \lambda_1, \lambda_2 \in \mathbb{R}
+		}$
+		\item Oder: $Bild(A) = \Biggl\langle \begin{pmatrix}1 \\ 2 \\ 3\end{pmatrix}, \begin{pmatrix}0 \\ -2 \\ -4\end{pmatrix} \Biggr\rangle$ (auch lineare Hülle oder Spann genannt)
+		\item Zusatz: $\dim(Bild(A)) = 2$ gilt $Rang(A)=2$
+    \end{enumerate}
+\end{frame}
+
 \subsection{Kern}
 \begin{frame}
     \frametitle{Kern}
@@ -80,7 +169,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Beispiel I}
+	\frametitle{Beispiel}
 	\begin{align*}
 		A = \begin{pmatrix}
 			1 & 1 & 2 \\
@@ -109,7 +198,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Beispiel II}
+	\frametitle{Beispiel}
 	\begin{align*}
 		a + c = 0 \\
 		b + c = 0 \\
@@ -117,25 +206,89 @@
 	Wir definieren dann zum Beispiel $c = t$ und erhalten
 	\begin{align*}
 		a = -t \\
-		b = -t 
+		b = -t
 	\end{align*}
-	Somit kommen wir dann auf Ker(A) = 
+	Somit kommen wir dann auf Ker(A) =
 	$\{t \cdot (-1, -1, 1) | t \in \mathbb{R}\}$
 \end{frame}
 
 \begin{frame}
-	\frametitle{Beispiel III}
+	\frametitle{Beispiel}
 	Da wir die Matrix A den Rang 2 hat haben wir 2 unabhängige Spaltenvektoren.
 	Daraus folgt das Bild:
 	\begin{align*}
 		Bild(A) = \{k_1 \cdot \begin{pmatrix}
 			1 \\
 			0 \\
-			1 
+			1
 		\end{pmatrix} + k_2 \cdot \begin{pmatrix}
 			1 \\
 			1 \\
-			0 
+			0
 		\end{pmatrix} | k_1, k_2 \in \mathbb{R}\}
 	\end{align*}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Übung}
+    Es sei
+    $A =
+    \begin{pmatrix}
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+        7 & 8 & 9
+    \end{pmatrix}$
+    \begin{enumerate}
+        \item Bestimmen Sie den Kern von $A$
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Übung - Lösung}
+    Es sei
+    $A =
+    \begin{pmatrix}
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+        7 & 8 & 9
+    \end{pmatrix}$
+    \begin{itemize}
+        \item $|A| = 0 \Rightarrow$ $A$ besitzt einen Kern
+        \item $Kern(A) =
+        \begin{pmatrix}
+            1 & 2 & 3 \\
+            4 & 5 & 6 \\
+            7 & 8 & 9
+        \end{pmatrix}
+        \cdot
+        \begin{pmatrix}
+            v_1 \\
+            v_2 \\
+            v_3
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            0 \\
+            0 \\
+            0
+        \end{pmatrix}$
+        \item $\rightarrow{Gauss} \begin{pmatrix}
+            1 & 2 & 3 \\
+            0 & -3 & -6 \\
+            0 & 0 & 0
+        \end{pmatrix} \Rightarrow$ $v_1 + 2v_2 + 3v_3 = 0$ und $-3v_2 -6v3 = 0$
+		\item also ein LGS mit 2 Gleichungen und 3 Unbekannten $\rightarrow$ unendlich viele Lösungen
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Übung - Lösung}
+	$v_1 + 2v_2 + 3v_3 = 0$ \\
+	$-3v_2 -6v3 = 0$
+    \begin{itemize}
+        \item Wir definieren $v_3 = t$
+		\item $-3v_2 -6t = 0 \Rightarrow v_2 = \frac{-6}{3}t = -2t$
+		\item $v_1 + 2 \cdot (-2)t + 3t = 0 \Rightarrow v_1 = 4t - 3t = t$
+		\item $Kern(A) = \{t \cdot \begin{pmatrix}1 \\ -2 \\ 1 \end{pmatrix} | t \in \mathbb{R}\}$
+    \end{itemize}
 \end{frame}
