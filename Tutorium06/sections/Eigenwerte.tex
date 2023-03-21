@@ -1,0 +1,142 @@
+\section{Eigenwerte und Eigenvektoren}
+
+
+% Grundüberlegung (Ausgangsmatrix muss quadratisch sein)
+\begin{frame}
+    \frametitle{Grundüberlegung zu Eigenwerten und Vektoren}
+    \begin{itemize}
+        \item Ausgangsmatrix A muss quadratisch sein
+        \item Wir suchen einen Vektor $\vec{u}$ der mit einer Skalarzahl $\lambda$ multipliziert gleich sich selbst multipliziert mit der Ausgangsmatrix $A$ ist
+    \end{itemize}
+    $\rightarrow A \cdot \vec{u} = \lambda \cdot \vec{u}$
+\end{frame}
+% gegenüberstellung Au = lambda u
+% umformung zu (A - lambda I)u = 0 (grund dafür) -> dies ist da charakteristisches polynom chi
+\begin{frame}
+    \frametitle{Berechnung der Eigenwerte}
+    \begin{itemize}
+        \item Umformen von $A \cdot \vec{u} = \lambda \cdot \vec{u}$, um Lambda berechnen zu können
+        \item $(A- \lambda I)\vec{u} = \vec{0}$
+        \item Deshalb muss $Ker(A - \lambda I) \neq \vec{0}$ sein
+        \item $\rightarrow det(A - \lambda I) = 0$ (Charakteristisches Polynom $\chi$ Chi)
+        \item Mit dem charakteristischen Polynom Chi können wir die Eigenwerte berechnen
+    \end{itemize}
+\end{frame}
+% Nullstellen von det(A- lambda I) = 0 sind eigenwerte
+\begin{frame}
+    \frametitle{Berechnung der Eigenwerte}
+    \begin{itemize}
+        \item Aufstellen des Polynoms zur Berechnung der Determinante
+        \item Nullstellen dieses Polynoms sind die Eigenwerte
+    \end{itemize}
+    Beispiel:
+    $det(\begin{pmatrix}
+        1 & 1 \\
+        1 & 1 \\
+    \end{pmatrix} - \lambda \cdot \begin{pmatrix}
+        1 & 0 \\
+        0 & 1 \\
+    \end{pmatrix}) \Rightarrow det(\begin{pmatrix}
+        1- \lambda & 1 \\
+        1 & 1- \lambda \\
+    \end{pmatrix}) = 0$
+
+    $(1- \lambda)^2 - 1 = \lambda ^2 - 2 \lambda = 0 $
+    \newline
+    
+    $\lambda _{1} = 0 $
+    \newline
+    $\lambda _{2} = 2$
+
+\end{frame}
+% Bei dreiecksmatrix sind die Eigenwerte die diagonalwerte
+
+% gibt es doppelte Nullstellen hat dieser Eigenwert beispielsweise die Vielfachheit 2
+% Summe aller eigenwerte (inklusive Vielfachheit) = det(A) = Summe aller diagonalwerte von A
+\begin{frame}
+    \frametitle{Eigenschaften der Eigenwerte}
+    \begin{itemize}
+        \item Bei Dreiecksmatrizen sind die Eigenwerte die Diagonalwerte
+        \item Gibt es doppelte Nullstellen hat dieser Eigenwert beispielsweise die Vielfachheit 2
+        \item  Summe aller eigenwerte jeweils multipliziert mit ihrer Vielfachheit $= det(A) =$ Summe aller diagonalwerte von A
+        \item In unserem Beispiel, beide Eigenwerte mit Vielfachheit 1 $\rightarrow 1+1 = 2$
+        \item Eine Matrix ist regulär wenn alle Eigenwerte ungleich 0 sind
+    \end{itemize}
+\end{frame}
+% Jeder eigenwert hat eigene Eigenvektoren
+% Berechnung der Eigenvektoren
+\begin{frame}
+    \frametitle{Berechnung der Eigenvektoren}
+    \begin{itemize}
+        \item Zu jedem Eigenwert gibt es eigene Eigenvektoren
+        \item Diese sind zu denen der anderen linear unabhängig
+    \end{itemize}
+    Eigenvektor zu $\lambda _{i}$ ist Lösung der Gleichung $(A - \lambda _{i} I) \vec{u} = \vec{0}$
+    $(\begin{pmatrix}
+        1 & 1 \\
+        1 & 1 \\
+    \end{pmatrix} - 0 \cdot \begin{pmatrix}
+        1 & 0 \\
+        0 & 1 \\
+    \end{pmatrix}) \cdot \begin{pmatrix}
+        u _{1} \\
+        u _{2} \\
+    \end{pmatrix} = \vec{0}$
+    \newline
+    Eigenvektor zu $\lambda _{1}$ ist Lösung der Gleichung, dies ist für alle Eigenvektoren zu wiederholen
+\end{frame}
+
+\begin{frame}
+    \frametitle{Eigenschaften von Eigenvektoren}
+    \begin{itemize}
+        \item Transponierte Matrix $A ^{T}$ hat die selben Eigenwerte wie $A$
+        \item Ist die Matrix symmetrisch sind die Eigenvektoren verschiedener Eigenwerte orthogonal
+    \end{itemize}
+\end{frame}
+
+% Übungen
+\begin{frame}
+    \frametitle{Übungen}
+    Bestimmen Sie die Eigenwerte und Eigenvektoren der folgenden Matrizen.
+    Sind die Matrizen regulär?
+  \begin{enumerate}
+        \item
+        $A = \begin{pmatrix}
+                 3 & 1 \\
+                 1 & 3 \\
+        \end{pmatrix}$
+        \item
+        $B = \begin{pmatrix}
+                 -8 & -2 \\
+                 16 & 4  \\
+        \end{pmatrix}$
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Lösungen}
+    \begin{enumerate}
+    \item $\lambda_1 = 4$ und $\lambda_2 = 2$ Daher regulär
+    \newline
+    Eigenvektor zu $\lambda_1$ ist $\vec{u_1} = \begin{pmatrix}
+        1 \\
+        1 \\
+    \end{pmatrix}$
+    \newline
+    Eigenvektor zu $\lambda_2$ ist $\vec{u_2} = \begin{pmatrix}
+        1 \\
+        -1 \\
+    \end{pmatrix}$
+    \item $\lambda_1 = -4$ und $\lambda_2 = 0$ Daher nicht regulär
+    \newline
+    Eigenvektor zu $\lambda_1$ ist $\vec{u_1} = \begin{pmatrix}
+        -1 \\
+        2 \\
+    \end{pmatrix}$
+    \newline
+    Eigenvektor zu $\lambda_2$ ist $\vec{u_2} = \begin{pmatrix}
+        -1 \\
+        4 \\
+    \end{pmatrix}$
+    \end{enumerate}
+\end{frame}
