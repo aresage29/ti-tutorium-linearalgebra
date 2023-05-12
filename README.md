@@ -8,7 +8,7 @@ Semester: 2023 Q1
 
 ## Tutoren
 - [Tobias Goetz](https://github.com/TobiasGoetz)
-- Mario Schwartz
+- [Mario Schwartz](https://github.com/mario4180)
 - [Felix Schladt](https://github.com/FelixSchladt)
 
 ## Wie kompiliere ich das Projekt?
