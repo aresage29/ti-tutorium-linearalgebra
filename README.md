@@ -1,15 +1,18 @@
 # Lineare Algebra Tutorium
+
+Folien übernommen von Tobias Goetz, Mario Schwartz, Felix Schladt
+
 ## Allgemeine Informationen
 Hochschule: DHBW Ravensburg Campus Friedrichshafen  
 Studiengang: Informatik  
 Modul: Mathematik I (T3INF1001)  
 Dozent: Christoph Spandl  
-Semester: 2023 Q1
+Semester: 2024 Q1
 
 ## Tutoren
-- [Tobias Goetz](https://github.com/TobiasGoetz)
-- [Mario Schwartz](https://github.com/mario4180)
-- [Felix Schladt](https://github.com/FelixSchladt)
+- Jan Köhler
+- Tim Mögerle
+- Paul Burgardt
 
 ## Wie kompiliere ich das Projekt?
 ### Voraussetzungen
