@@ -49,9 +49,10 @@
     Lösungen zu 1:
         \begin{itemize}
 
-    \vfill \item Induktionsanfang
+    \vfill \item Induktionsanfang:
     \newline $\sum_{i=1}^{1} 1^2 = \frac{1(1+1)(2*1+1)}{6}=1$
-        \vfill \item Aus Induktionsanfang folgt Induktionsvorraussetzung
+    \newline \item Induktionsvoraussetzung:
+    \newline $\sum_{i=1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}$
         \vfill \item Induktionsschritt ($n \Rightarrow n+1$):
     \newline $\sum_{i=1}^{n+1} i^2 = \frac{(n+1)(n+2)(2n+3)}{6}$
             \vfill \item Folglich gilt zu zeigen:
@@ -64,10 +65,40 @@
     \frametitle{Vollständige Induktion}
     Lösungen zu 1:
         \begin{itemize}
-            \vfill \item $\sum_{i=1}^{n} i^2 + (n+1)^2 = \frac{(n+1)(n+2)(2n+3)}{6}$
-            \vfill \item $\frac{n(n+1)(2n+1)}{6} + (n+1)^2 = \frac{n(n+1)(2n+1)}{6} +n^2 +1$
-            \vfill \item $\frac{n(n+1)(2n+1)}{6} + (n+1)^2 = \frac{2n^3 +3n^2 +n}{6} + \frac{6n^2 +12n+6}{6}$
-    \end{itemize}
-    \vfill $\frac{n(n+1)(2n+1)}{6} + \frac{((n+1)^2)6}{6} = \frac{(n+1) + (n+2)(2*(n+1)+1)}{6}$
+            \vfill $\sum_{i=1}^{n} i^2 + (n+1)^2 = \frac{(n+1)(n+2)(2n+3)}{6}$
+            \vfill \item Durch Einsetzen der IV erhalten wir:
+            \vfill $\frac{n(n+1)(2n+1)}{6} + (n+1)^2 = \frac{(n+1)(n+2)(2n+3)}{6} $
+            \vfill $\frac{n(n+1)(2n+1)}{6} + \frac{((n+1)^2)6}{6} = \frac{(n+1)(n+2)(2n+3)}{6}$
+            \vfill $\frac{n(n+1)(2n+1) + ((n+1)^2)6}{6} = \frac{(n+1)(n+2)(2n+3)}{6}$
+            \vfill \item Aufloesen ergibt:
+            \vfill $\frac{2n^3 + 9n^2 + 13n + 6}{6} = \frac{2n^3 + 9n^2 + 13n + 6}{6} \blacksquare$
+        \end{itemize}
 
+\end{frame}
+
+\begin{frame}
+    \frametitle{Vollständige Induktion}
+    Lösungen zu 2:
+        \begin{itemize}
+            \vfill \item Induktionsanfang:
+            \vfill \newline $\sum_{i=1}^{1} 2*1-1 = 1^2$
+            \vfill \item Induktionsvoraussetzung:
+            \vfill \newline $\sum_{i=1}^{n} (2*i-1) = n^2$
+            \vfill \item Induktionsschritt:
+            \vfill \newline $\sum_{i=1}^{n+1} (2*i-1) = (n+1)^2$
+            \vfill \newline $\sum_{i=1}^{n} (2*i-1)+(2(n+1)-1) = (n+1)^2$
+            \vfill \newline $\sum_{i=1}^{n} (2*i-1)+(2n+1) = (n+1)^2$
+        \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Vollständige Induktion}
+    Lösungen zu 2:
+        \begin{itemize}
+            \vfill \item Durch Einsetzen der IV erhalten wir:
+            \vfill \newline $n^2+(2n+1) = (n+1)^2$
+            \vfill \item Aufloesen ergibt:
+            \vfill \newline $n^2+2n+1 = n^2 + 2n + 1 \blacksquare$
+        \end{itemize}
 \end{frame}
