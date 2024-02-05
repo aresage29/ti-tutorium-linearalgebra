@@ -9,12 +9,11 @@
         \item Kann nur gebildet werden, wenn die Vektoren die gleiche Dimension haben
         \item Wenn das Skalarprodukt 0 ist, sind die Vektoren orthogonal (Rechter Winkel)
     \end{itemize}
-    Beispiel: $\vec{a} = (1,2,3)$ und $\vec{b} = (4,5,6)$
-    \begin{align*}
-        \vec{a} \bullet \vec{b} &= (1,2,3) \bullet (4,5,6) \\
-        &= 1 \cdot 4 + 2 \cdot 5 + 3 \cdot 6 \\
-        &= 32
-    \end{align*}
+    \vfill Beispiel: $\vec{a} = (1,2,3)$ und $\vec{b} = (4,5,6)$
+
+    $\vec{a}$ \bullet \vec{b} &= (1,2,3) \bullet (4,5,6)
+    &= 1 \cdot 4 + 2 \cdot 5 + 3 \cdot 6
+    &= 32
 \end{frame}
 
 
@@ -66,9 +65,7 @@
     \begin{enumerate}
         \item $\lVert \begin{pmatrix}
                           -1 \\ 5 \\ -0.5
-        \end{pmatrix} \rVert = $ \\
-        $ $\\
-        $ \sqrt{(-1)^2 + 5^2 + (-0.5)^2} = \sqrt{26.25} = 5.124$
+        \end{pmatrix} \rVert = $\sqrt{(-1)^2 + 5^2 + (-0.5)^2} = \sqrt{26.25} = 5.124$
     \end{enumerate}
 \end{frame}
 
@@ -134,16 +131,24 @@
 \subsection{Orthogonale Projektion}
 \begin{frame}
     \frametitle{Orthogonale Projektion}
-    Gegeben sind ein Vektor $\vec{a}$ und ein Einheitsvektor $\vec{e}$\\
-    $\vec{a}$ kann dann eindeutig in zwei zueinander orthogonale Komponenten zerlegt werden:\\
-    $\vec{a} = \vec{a}_{\parallel} + \vec{a}_{\perp}$ \\
-    $ $\\
-    $\vec{a}_{\parallel} = < \vec{a}, \vec{e}> \cdot \vec{e}$ \\
+    \vfill Gegeben sind ein Vektor $\vec{a}$ und ein Einheitsvektor $\vec{e}$
+    \vfill Vektor $\vec{a}$ kann nun in zwei Vektoren zerlegt werden:
+    \vfill $\vec{a} = \vec{a}_{\parallel} + \vec{a}_{\perp}$
+    \vfill \begin{itemize}
+        \item $\vec{a}_{\parallel}$ ist parallel zum Vektor \vec{e}
+        \item $\vec{a}_{\perp}$ ist orthogonal zu $\vec{a}_parallel$ und \vec{e}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \vfill Es gilt dann:
+    \vfill $\vec{a}_{\parallel} = < \vec{a}, \vec{e}> \cdot \vec{e}$ \\
     \begin{itemize}
         \item orthogonale Projektion von $\vec{a}$ in Richtung $\vec{e}$
         \item parrallel zu $\vec{e}$
     \end{itemize}
-    $\vec{a}_{\perp} = \vec{a} - <\vec{a}, \vec{e}> \cdot \vec{e} = \vec{a} - \vec{a}_{\parallel}$
+    \\
+    \vfill$\vec{a}_{\perp} = \vec{a} - <\vec{a}, \vec{e}> \cdot \vec{e} = \vec{a} - \vec{a}_{\parallel}$
     \begin{itemize}
         \item orthogonales Komplement von $\vec{a}$ in Richtung $\vec{e}$
         \item ist orthogonal zu $\vec{e}$

@@ -44,14 +44,20 @@
 
 \begin{frame}
     \frametitle{Vektoren Uebung Loesung}
-    Seien $v = (-2, 3, -6)$ und $w = (4, 5, 6)$ zwei $n$-dimensionale Vektoren.
     \begin{enumerate}
-        \item $v + w = (-2 + 4, 3 + 5, -6 + 6) = (2, 8, 0)$.
-        \item $v - w = (-2 - 4, 3 - 5, -6 - 6) = (-6, -2, -12)$.
-        \item $2 \cdot v = (2 \cdot -2, 2 \cdot 3, 2 \cdot -6) = (-4, 6, -12)$.
-        \item $|v| = \sqrt{(-2)^2 + 3^2 + (-6)^2} = \sqrt{4 + 9 + 36} = \sqrt{49} = 7$.
-        \item $\hat{v} = \frac{v}{|v|} = \frac{(-2, 3, -6)}{7} = \frac{(-2, 3, -6)}{7} = (-\frac{2}{7}, \frac{3}{7}, -\frac{6}{7})$.
-        \item $v \cdot w = ((-2) \cdot 4) + (3 \cdot 5) + ((-6) \cdot 6) = (-8) + 15 + (-36) = -29$.
+        \vfill \item $v + w = (-2 + 4, 3 + 5, -6 + 6) = (2, 8, 0)$.
+        \vfill \item $v - w = (-2 - 4, 3 - 5, -6 - 6) = (-6, -2, -12)$.
+        \vfill \item $2 \cdot v = (2 \cdot -2, 2 \cdot 3, 2 \cdot -6) = (-4, 6, -12)$.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Vektoren Uebung Loesung}
+    \begin{enumerate}
+        \setcounter{enumi}{3}
+        \vfill \item $|v| = \sqrt{(-2)^2 + 3^2 + (-6)^2} = \sqrt{4 + 9 + 36} = \sqrt{49} = 7$.
+        \vfill \item $\hat{v} = \frac{v}{|v|} = \frac{(-2, 3, -6)}{7} = \frac{(-2, 3, -6)}{7} = (-\frac{2}{7}, \frac{3}{7}, -\frac{6}{7})$.
+        \vfill \item $v \cdot w = ((-2) \cdot 4) + (3 \cdot 5) + ((-6) \cdot 6) = (-8) + 15 + (-36) = -29$.
     \end{enumerate}
 \end{frame}
 
@@ -64,64 +70,6 @@
     \end{itemize}
 \end{frame}
 
-\subsection{Exkurs}
-\begin{frame}
-    \frametitle{Exkurs: Mathematische Definition Vektorräume}
-    \begin{itemize}
-        \item Gruppe
-        \begin{itemize}
-            \item $(G,*)$, Menge $G$, Verknüpfung $*$
-            \item Assoziativität
-            \item Existenz eines neutrales Elements
-            \item Existenz eines inversen Elements
-        \end{itemize}
-        \item Ring
-        \begin{itemize}
-            \item $(R,+,*)$ mit $R$ Menge, $+$ Verknüpfung, $*$ Verknüpfung
-            \item $(R,+)$ ist abelsche Gruppe(Gruppe mit Kommutativgesetz)
-            \item $(R,*)$ ist Halbgruppe(nur Assoziativität)
-            \item Distributiv 1: $a * (b + c) = a * b + a * c$
-            \item Distributiv 2: $(a + b) * c = a * c + b * c$
-        \end{itemize}
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Exkurs: Mathematische Definition Vektorräume}
-    \begin{itemize}
-        \item Körper
-        \begin{itemize}
-            \item $(K,+,*)$ mit $K$ Menge, $+$ Verknüpfung, $*$ Verknüpfung
-            \begin{itemize}
-                \item $(K,+)$ ist abelsche Gruppe
-                \item $(K\setminus\{0\},*)$ ist abelsche Gruppe
-                \item Distributiv 1: $a * (b + c) = a * b + a * c$
-                \item Distributiv 2: $(a + b) * c = a * c + b * c$
-            \end{itemize}
-            \item alternativ: kommutativer unitärer Ring, der nicht Nullring ist
-        \end{itemize}
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Exkurs: Ursprung der Vektorraumaxiome}
-    \begin{itemize}
-        \item K-Vektorraum
-        \begin{itemize}
-            \item $(V,+,*)$
-            \item $(V,+)$ ist abelsche Gruppe
-            \item $\cdot: K \times V \rightarrow V ((\lambda, v) \mapsto \lambda \cdot v)$
-            \begin{itemize}
-                \item $\forall v,w \in V$ und $\forall \lambda, \mu \in K$ gilt:
-                \item $(\lambda + \mu) \cdot v = \lambda \cdot v + \mu \cdot v$
-                \item $\lambda \cdot (v + w) = \lambda \cdot v + \lambda \cdot w$
-                \item $(\lambda \cdot \mu) \cdot v = \lambda \cdot (\mu \cdot v)$
-                \item $\lambda \cdot 1 = \lambda$
-            \end{itemize}
-        \end{itemize}
-    \end{itemize}
-\end{frame}
-
 \subsection{Vektorräume}
 \begin{frame}
     \frametitle{Vektorräume}
@@ -129,7 +77,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Allgemeine Rechenregeln}
+    \frametitle{Allgemeine Rechenregeln in VR}
     Vektoraddition
     \begin{itemize}
         \item Kommutativgesetz: $v + w = w + v$
