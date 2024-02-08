@@ -11,9 +11,9 @@
     \end{itemize}
     \vfill Beispiel: $\vec{a} = (1,2,3)$ und $\vec{b} = (4,5,6)$
 
-    $\vec{a}$ \bullet \vec{b} &= (1,2,3) \bullet (4,5,6)
-    &= 1 \cdot 4 + 2 \cdot 5 + 3 \cdot 6
-    &= 32
+    $\vec{a} \cdot \vec{b} = (1,2,3) \cdot (4,5,6)$
+    $= 1 \cdot 4 + 2 \cdot 5 + 3 \cdot 6$
+    $= 32$
 \end{frame}
 
 
@@ -38,7 +38,7 @@
     \frametitle{Betrag eines Vektors}
     Der Betrag eines Vektors ist die Länge des Vektors.
     \begin{itemize}
-        \item Die länge eines Vektors ist immer positiv
+        \item Die Länge eines Vektors ist immer positiv
         \item Der Betrag eines Vektors wird mit $\lVert \vec{a} \rVert$ dargestellt
         \item $\lVert \vec{a} \rVert = \sqrt{<\vec{a}, \vec{a}>}$
     \end{itemize}
@@ -65,7 +65,7 @@
     \begin{enumerate}
         \item $\lVert \begin{pmatrix}
                           -1 \\ 5 \\ -0.5
-        \end{pmatrix} \rVert = $\sqrt{(-1)^2 + 5^2 + (-0.5)^2} = \sqrt{26.25} = 5.124$
+       \end{pmatrix} \rVert = \sqrt{(-1)^2 + 5^2 + (-0.5)^2} = \sqrt{26.25} = 5.123$
     \end{enumerate}
 \end{frame}
 
@@ -135,8 +135,8 @@
     \vfill Vektor $\vec{a}$ kann nun in zwei Vektoren zerlegt werden:
     \vfill $\vec{a} = \vec{a}_{\parallel} + \vec{a}_{\perp}$
     \vfill \begin{itemize}
-        \item $\vec{a}_{\parallel}$ ist parallel zum Vektor \vec{e}
-        \item $\vec{a}_{\perp}$ ist orthogonal zu $\vec{a}_parallel$ und \vec{e}
+        \item $\vec{a}_{\parallel}$ ist parallel zum Vektor $\vec{e}$
+        \item $\vec{a}_{\perp}$ ist orthogonal zu $\vec{a}_{\parallel}$ und $\vec{e}$
     \end{itemize}
 \end{frame}
 
@@ -145,9 +145,9 @@
     \vfill $\vec{a}_{\parallel} = < \vec{a}, \vec{e}> \cdot \vec{e}$ \\
     \begin{itemize}
         \item orthogonale Projektion von $\vec{a}$ in Richtung $\vec{e}$
-        \item parrallel zu $\vec{e}$
+        \item parallel zu $\vec{e}$
     \end{itemize}
-    \\
+
     \vfill$\vec{a}_{\perp} = \vec{a} - <\vec{a}, \vec{e}> \cdot \vec{e} = \vec{a} - \vec{a}_{\parallel}$
     \begin{itemize}
         \item orthogonales Komplement von $\vec{a}$ in Richtung $\vec{e}$
@@ -185,7 +185,7 @@
     \begin{enumerate}
         \item Bilden des Einheitsvektors \\
         $\vec{e} = \frac{\vec{b}}{\lvert \vec{b} \rvert} = \frac{1}{\sqrt{13}} \cdot (-2, 3)$\\
-        \item Bilden von $\vec{a}_{\parallel}$
+        \item Bilden von 
         $\vec{a}_{\parallel} = \frac{1}{\sqrt{13}} \cdot <(-2, 3), (2, 5)> \cdot \frac{1}{\sqrt{13}} \cdot (-2, 3)$ \\
         $= \frac{1}{13} \cdot 11 \cdot (-2, 3) = \frac{11}{13}(-2, 3)$\\
         \textit{Faktor von $\vec{e}$  aus Skalarprodukt ausgeklammert}\\
