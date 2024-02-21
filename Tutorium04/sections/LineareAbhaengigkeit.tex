@@ -14,11 +14,12 @@
 \begin{frame}
     \frametitle{Lineare Abhängigkeit - Überprüfung}
     \begin{itemize}
-        \item Überprüfbar ist dies durch Lösung des Gleichungssystems aller Vektoren multipliziert mit den Skalaren k
-        \item $k1 * (ax1, ay1) + k2* (ax2, ay2) = 0$ 
-        \item $k1 * ax1 + k2* ax2 = 0$
-        \item $k1 * ay1 + k2* ay2 = 0$
-        \item Sind alle k ungleich 0, dann sind die Vektoren linear unabhängig
+        \item Überprüfbar ist dies durch Lösung des Gleichungssystems aller Vektoren multipliziert mit den Skalaren $k_1, k_2, ..., k_n$
+        \item $k_1 * (ax_1, ay_1) + k_2* (ax_2, ay_2) = 0$ 
+	\item Daraus folgt:
+        \item 1: $k_1 * ax_1 + k_2* ax_2 = 0$
+        \item 2: $k_1 * ay_1 + k_2* ay_2 = 0$
+        \item Sind alle $k_1, k_2, ..., k_n$ ungleich 0, dann sind die Vektoren linear abhängig
     \end{itemize}
 \end{frame}
 
@@ -35,11 +36,11 @@
     \frametitle{Lineare Abhängigkeit - Übung}
     Lösung
     \begin{itemize}
-        \item $\vec{a} = k1 * (1, 2) + k2 * (2, 4) + k3 * (3, 6)$
-        \item $k1 * 1 + k2 * 2 + k3 * 3 = 0$
-        \item $k1 * 2 + k2 * 4 + k3 * 6 = 0$
-        \item $k1 = -k2 = -k3$
-        \item $\vec{a} = -k1 * (1, 2) = -k1 * \vec{b} = -k1 * \vec{c}$
+        \item $0 = k_1 * (1, 2) + k_2 * (2, 4) + k_3 * (3, 6)$
+	\item Daraus folgt:
+        \item $k_1 * 1 + k_2 * 2 + k_3 * 3 = 0$
+        \item $k_1 * 2 + k_2 * 4 + k_3 * 6 = 0$
+	\item Es ergibt sich die Lösung, dass bei $k1 = k2 = -k3$ die Gleichung immer 0 ist. Folglich gilt: 
         \item $\vec{a}$ ist linear abhängig von $\vec{b}$ und $\vec{c}$
     \end{itemize}
 \end{frame}

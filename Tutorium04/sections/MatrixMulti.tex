@@ -1,4 +1,4 @@
-\section{Matrix Muliplikation}
+\section{Matrix Multiplikation}
 \subsection{Grundlagen}
 \begin{frame}
 \frametitle{Matrix Multiplikation}
@@ -143,6 +143,32 @@ Regeln:
 \end{frame}
 
 \begin{frame}
+\frametitle{Matrix Multiplikation - Inverse bestimmen}
+Schneller Test ob eine Inverse einer quadratischen Matrix existiert: det(A)$\neq$0\\
+Berechnen der Inversen:
+\begin{enumerate}
+\item Determinante Prüfen
+\item Matrix neben Trennstrich um Einheitsmatrix erweitern
+\item Umformung mittels z. B. Gauß-Jordan-Algorithmus um Einheitsmatrix anstelle Ursprungsmatrix zu erzeugen
+\item Matrix rechts vom Trennstrich ist jetzt die invertierte Matrix
+\end{enumerate}
+\end{frame}
+
+\begin{frame} 
+\frametitle{Matrix Multiplikation - Inverse bestimmen}
+Sonderfall 2x2 Matrix:\\
+
+$\begin{pmatrix}
+a & b\\
+c & d
+\end{pmatrix}^{-1} = 
+\frac{1}{ad - bc} \begin{pmatrix}
+d & -b\\
+-c & a
+\end{pmatrix}$
+\end{frame}
+
+\begin{frame}
 \frametitle{Matrix Multiplikation - Inverse - Übungen}
 \begin{enumerate}
 \item Ist Matrix $A = \begin{pmatrix} 2 & 4 \\ 4 & 2 \end{pmatrix}$ regulär? Wenn ja dann gebe die Inverse an.
@@ -156,8 +182,8 @@ Regeln:
 \begin{enumerate}
 \item Ist Matrix $A = \begin{pmatrix} 2 & 4 \\ 4 & 2 \end{pmatrix}$ regulär? Wenn ja dann gebe die Inverse an. \\
 Lösung: Ja; Gesucht Matrix $B = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$
-$B = \frac{1}{6}\begin{pmatrix} -1 & 2 \\ 2 & -1 \end{pmatrix}$
-\item Ist Matrix $B = \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{pmatrix}$ regulär? Nein
+$B = \frac{1}{-12}\begin{pmatrix} 2 & -4 \\ -4 & 2 \end{pmatrix}$
+\item Ist Matrix $B = \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{pmatrix}$ regulär? Nein, da nicht quadratisch
 \item  Ist Matrix $C = \begin{pmatrix} 12 & 4 \\ 0 & 0  \end{pmatrix}$ regulär?
 Lösung: Nein denn Determinante $\neq 0$.
 \end{enumerate}
